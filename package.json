@@ -12,6 +12,7 @@
   "dependencies": {
     "async": "^2.6.0",
     "nightmare": "^3.0.1",
-    "vo": "^4.0.2"
+    "vo": "^4.0.2",
+    "json2xls":"0.1.2"
   }
 }

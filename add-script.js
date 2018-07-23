@@ -1,15 +1,15 @@
 const Nightmare = require("nightmare");
 const vo = require("vo");
 const nightmare = Nightmare({ show: true });
-const password = require("./password");
+const auth = require("./auth");
 const fs = require("fs");
 const emailList = require("./email-list.js");
 
 var run = function*() {
   yield nightmare
     .goto("https://www.linkedin.com/")
-    .type("input#login-email", "anthonytxie@gmail.com")
-    .type("input#login-password", password)
+    .type("input#login-email", auth.username)
+    .type("input#login-password", auth.password)
     .click("input#login-submit")
     .wait(2000);
 
